@@ -15,7 +15,7 @@ export class CreateTable implements CreatableUseCase {
   }
 
   execute({ base, limit = 10 }: CreateTableOptions) {
-    let template = "";
+    let template = `===================\n    Tabla del ${base}    \n===================\n\n`;
     for (let number = 1; number <= limit; number++) {
       const newLine = `${base} x ${number} = ${base * number}`;
       template += `${newLine}\n`;
